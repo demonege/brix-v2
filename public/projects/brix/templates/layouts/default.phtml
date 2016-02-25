@@ -1,0 +1,16 @@
+<html>
+    <head>
+        <title><?= $this->translate('main.title')?></title>
+        <link rel="stylesheet" href="<?= $this->resourceHelper('css/aplication.css') ?>">
+    </head>
+    <script src="<?= $this->resourceHelper('javascripts/test.js') ?>"></script>
+    <div class="navi">
+        <div class="logo">
+            <a href="/"><img src="<?= $this->resourceHelper('/img/logo.png') ?>"></a>
+        </div>
+        <div class="ul-wrapper">
+            <?= $this->getFromRegistry('navigation')->render(); ?>
+        </div>
+    </div>
+    <?= $this->renderView() ?>
+</html>

@@ -1,0 +1,67 @@
+.news
+{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    height: 250px;
+    margin-top: 80px;
+    background-color: $grey;
+
+    .image
+    {
+        width:20%;
+        margin: 0;
+        float:left;
+        height: 100%;
+    }
+    img
+    {
+        height: 100%;
+        width: 100%;
+    }
+}
+
+.news-text
+{
+    padding: 20px;
+    padding-left:20%;
+    left: 20px;
+    position: relative;
+}
+
+.head-text
+{
+    padding-right: 20%;
+}
+
+
+.col-wrapper
+{
+    margin-top: 30px;
+    padding-right: 20%;
+    text-align: center;
+
+    .col-1
+    {
+        float: left;
+
+        .head
+        {
+            font-weight:bold;
+        }
+
+    }
+    .col-2
+    {
+        float: right;
+        .head
+        {
+            font-weight:bold;
+        }
+    }
+    li
+    {
+        padding-top: 5px;
+        line-height: 25px;
+    }
+}

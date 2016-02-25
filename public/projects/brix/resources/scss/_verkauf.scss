@@ -1,0 +1,91 @@
+.verkauf
+{
+    height:100%;
+    background-color: white;
+    padding: 0px 10px 0px 10px;
+    margin-top: 100px;
+    position: relative;
+
+    .contentVerkauf
+    {
+        text-align: center;
+    }
+
+    .brix-btn
+    {
+        background-color: #59AB27;
+        border:none;
+        margin:5px;
+        padding:10px;
+        font-weight: bold;
+        cursor: pointer;
+        color:#ffffff;
+        text-transform: uppercase;
+        transition: background-color 1s ease;
+    }
+    .brix-btn:hover
+    {
+        background-color: #27ae60;
+        border-color:#27ae60;
+        color:#ffffff;
+    }
+
+    .row
+    {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .name
+    {
+        display:none;
+    }
+    .winterhart
+    {
+        dislay:block;
+    }
+    .pflegeleicht
+    {
+        dislay:block;
+    }
+    .wenig_licht
+    {
+        dislay:block;
+    }
+    .wenig_wasser
+    {
+        dislay:block;
+    }
+    .portfolio
+    {
+        margin: 5px;
+        flex-basis: 19%;
+        position: relative;
+    }
+    .portfolio:hover
+    {
+        cursor: pointer;
+        opacity: 0.6;
+        .name
+        {
+            display: block;
+            color: white;
+            position: absolute;
+            top: 0;
+            left:0;
+            height: 100%;
+            width: 100%;
+            text-align: center;
+            h3
+            {
+                font-size: 30px;
+                font-weight: bold;
+            }
+            p
+            {
+                font-size: 20px;
+                font-weight: bold;
+            }
+        }
+    }
+}

@@ -1,0 +1,53 @@
+.oeffnungszeiten
+{
+    width: 100%;
+    background-color: orange;
+    margin-top: 80px;
+    height: 350px;
+}
+.headline
+{
+    padding-top: 40px;
+    color: white;
+    font-size: $fontHeadline;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.col-wrapper-oeffnung
+{
+    margin-top: 30px;
+    padding-right: 20%;
+    text-align: center;
+
+    .col-1
+    {
+        float: left;
+
+        .head
+        {
+            font-weight:bold;
+        }
+
+    }
+    .col-2
+    {
+        .head
+        {
+            font-weight:bold;
+        }
+    }
+    .col-3
+    {
+        float: right;
+        .head
+        {
+            font-weight:bold;
+        }
+    }
+    li
+    {
+        padding-top: 5px;
+        line-height: 25px;
+    }
+}

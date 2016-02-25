@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projects>
+	<brix active="true">
+		<name>brix name</name>
+		<description>brix description</description>
+		<namespace>brix</namespace>
+	</brix>
+</projects>

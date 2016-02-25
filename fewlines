@@ -1,0 +1,18 @@
+#!/usr/bin/env php
+<?php
+
+/**
+ * Create the autoloader for the application
+ */
+
+$autoloader = require __DIR__ . '/vendor/autoload.php';
+
+/**
+ * Create the application to load all
+ * available commands
+ */
+
+use \Fewlines\Core\Application\Application;
+
+$application = new Application(__DIR__, $autoloader);
+$application->bootstrap(Application::ENVIRONMENT_CMD)->run();

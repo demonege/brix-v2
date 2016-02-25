@@ -1,0 +1,89 @@
+.angebot
+{
+    height:500px;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 80px;
+
+    .content
+    {
+        width: 100%;
+        display: flex;
+
+        .container
+        {
+            width: 100%;
+            padding:40px;
+            margin-bottom: 15px;
+        }
+
+        #floristik
+        {
+            background-color: $green;
+            margin-right: 15px;
+        }
+
+        #hochzeitsfloristik
+        {
+            background-color: $salmon;
+            margin-right: 15px;
+        }
+
+        #trauerfloristik
+        {
+            background-color: $green;
+        }
+
+        #pflanzen
+        {
+            background-color: $salmon;
+            margin-right: 15px;
+        }
+
+        #service
+        {
+            background-color: $green;
+            margin-right: 15px;
+        }
+
+        #landschaftspflege
+        {
+            background-color: $salmon;
+        }
+
+        .text
+        {
+            img
+            {
+                display: block;
+                margin: 0 auto;
+                padding-bottom: 30px;
+            }
+
+            .head
+             {
+                display: block;
+                margin:0 auto;
+                text-align: center;
+                text-transform: uppercase;
+             }
+
+            .button
+            {
+                background-color: #59AB27;
+                border:none;
+                text-align: center;
+                padding:10px;
+                cursor: pointer;
+                color:#ffffff;
+                margin-left: auto;
+                margin-right: auto;
+                margin-top: 15px;
+                border-radius: 5px;
+                width: 60%;
+                transition: background-color 1s ease;
+            }
+        }
+    }
+}

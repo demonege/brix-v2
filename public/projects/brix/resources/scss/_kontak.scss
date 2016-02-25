@@ -1,0 +1,84 @@
+.kontakt
+{
+    height:100%;
+    background-color: white;
+    padding: 0px 10px 0px 10px;
+    margin-top: 100px;
+    position: relative;
+    margin-bottom: 50px;
+
+    .formular
+    {
+
+    }
+
+    .input-box
+    {
+        width:500px;
+        height: 20px;
+        background-color: gray;
+        border:none;
+        margin-top: 10px;
+        opacity: 0.5;
+        color: white;
+    }
+
+
+    .description
+    {
+        width:99%;
+        height:150px;
+        border:none;
+        margin-top: 10px;
+        background-color: gray;
+        opacity: 0.5;
+        color: white;
+    }
+
+    .error
+    {
+        width:500px;
+        height:20px;
+        background-color: #e74c3c;
+        border-bottom-right-radius: 10px;
+        border-bottom-left-radius: 10px;
+        text-align: center;
+        font-size: 15px;
+        padding-top: 4px;
+        padding-bottom: 4px;
+    }
+
+    .brix-btn-form
+    {
+        background-color: #59AB27;
+        border:none;
+        margin-top:5px;
+        padding:10px;
+        font-weight: bold;
+        cursor: pointer;
+        color:#ffffff;
+        text-transform: uppercase;
+        width: 100%;
+        transition: background-color 1s ease;
+
+        &:hover
+        {
+            background-color: #27ae60;
+            border-color:#27ae60;
+            color:#ffffff;
+        }
+    }
+
+    .formular-berreich
+    {
+        width:500px;
+        margin: 0 auto;
+        ul
+        {
+            li
+            {
+                background-color:red;
+            }
+        }
+    }
+}

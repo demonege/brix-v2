@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<navigation shortcuts="true">
+    <page1>
+        <label>{lang->(navigation.angebot)}</label>
+        <class target="a">link</class>
+        <url>#angebot</url>
+    </page1>
+    <page2>
+        <label>{lang->(navigation.impressionen)}</label>
+        <class target="a">link</class>
+        <url>#angebot</url>
+    </page2>
+    <page3>
+        <label>{lang->(navigation.oeffnungszeiten)}</label>
+        <class target="a">link</class>
+        <url>#angebot</url>
+    </page3>
+    <page4>
+        <label>{lang->(navigation.contact)}</label>
+        <class target="a">link</class>
+        <url>#angebot</url>
+    </page4>
+</navigation>

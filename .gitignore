@@ -1,0 +1,14 @@
+# General
+Thumbs.db
+*.flcache
+*.cache
+.idea
+.sass-cache
+*.orig
+.DS_Store
+.phpintel
+.idea
+
+# Specific
+vendor
+composer.lock

@@ -1,0 +1,26 @@
+<?php
+
+    $this->form->setAttribute('action', '/');
+    $this->form->prepare();
+
+?>
+<div id="kontakt" class="kontakt">
+    <h1>Kontakt</h1>
+    <div class="formular">
+        <form class="formular-berreich" action="" method="POST">
+            <div class="wrapper">
+                <?php echo $this->formRow($this->form->get('name')); ?>
+            </div>
+            <div class="email-field">
+                <?php echo $this->formRow($this->form->get('email')); ?>
+            </div>
+            <div class="wrapper">
+                <?php echo $this->formRow($this->form->get('betreff')); ?>
+            </div>
+            <div class="textarea">
+                <?php echo $this->formRow($this->form->get('beschreibung')); ?>
+            </div>
+            <?php echo $this->formRow($this->form->get('abschicken')); ?>
+        </form>
+    </div>
+</div>

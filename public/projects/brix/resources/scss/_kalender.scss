@@ -1,0 +1,107 @@
+.Kalender
+{
+    margin-top:100px;
+}
+.kalenderbackground
+{
+    height:100%;
+    width:100%;
+    background-image: url("../img/anemone.jpg");
+    opacity: 0.7;
+    position: absolute;
+    @include background-size(cover);
+}
+
+.kalenderberreich
+{
+    height:100%;
+    padding: 80px 10px 80px 10px;
+    margin-top: 10px;
+    position: relative;
+    color:black;
+    table
+    {
+        width: 70%;
+        margin:0 auto;
+        height:500px;
+        padding: 10px;
+        tr
+        {
+            border:1px solid black;
+
+            td
+            {
+                width:14%;
+                height: 20%;
+                border:1px solid black;
+                vertical-align: baseline;
+                background: rgba(255, 255, 255, 0.5);
+            }
+        }
+    }
+
+    .event
+    {
+        padding: 10px;
+    }
+
+    .number
+    {
+        padding-top: 10px;
+        border-bottom: 1px solid black;
+        margin-left: 10px;
+        margin-right: 10px;
+        position: relative;
+    }
+
+    .innerEvent
+    {
+        width:100%;
+        background:blue;
+        font-size: 10px;
+    }
+}
+.KalenderButtonNext
+{
+    float: right;
+    padding-right: 5px;
+    padding-top: 5px;
+    color: black;
+
+    &:before
+    {
+        font-family: 'icomoon';
+        content:"\e607";
+    }
+
+    &:hover
+    {
+        cursor: pointer;
+    }
+}
+
+.KalenderButtonLast
+{
+    float: right;
+    margin-right: 20px;
+    padding-right: 5px;
+    margin-top: 4px;
+    color: black;
+    @include transform(rotate(180deg));
+
+    &:before
+    {
+        font-family: 'icomoon';
+        content:"\e607";
+    }
+
+    &:hover
+    {
+        cursor: pointer;
+    }
+}
+
+.month
+{
+    color:black;
+}
