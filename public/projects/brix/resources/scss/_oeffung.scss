@@ -17,33 +17,19 @@
 .col-wrapper-oeffnung
 {
     margin-top: 30px;
-    padding-right: 20%;
     text-align: center;
+    padding-left: 10%;
 
-    .col-1
+    .col
     {
         float: left;
+        margin: 30px 40px 0px;
 
         .head
         {
             font-weight:bold;
         }
 
-    }
-    .col-2
-    {
-        .head
-        {
-            font-weight:bold;
-        }
-    }
-    .col-3
-    {
-        float: right;
-        .head
-        {
-            font-weight:bold;
-        }
     }
     li
     {

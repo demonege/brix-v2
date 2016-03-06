@@ -1,49 +1,18 @@
+<?php
+    $path = 'img/icons/Icon_';
+?>
 <div id="angebot" class="angebot">
-    <h1>Unsere Angebote</h1>
-    <div class="content">
-        <div class="container" id="floristik">
-            <div class="text">
-                <img src="<?= $this->resourceHelper('img/icons/Icon_Floristik.svg') ?>">
-                <p class="head">Floristik</p>
-                <div class="button" id="quality-btn"><?= $this->translate('angebot.button-lable')?></div>
+    <?php foreach ($this->translate('angebot.content') as $array): ?>
+        <div class="content">
+            <?php foreach ($array as $text): ?>
+            <div class="container" id='<?= $text ?>'>
+                <div class="text">
+                    <img src="<?= $this->resourceHelper($path . $text . '.svg' )?>">
+                    <p class="head"><?= $text ?></p>
+                    <div class="button" id="quality-btn"><?= $this->translate('angebot.button-lable')?></div>
+                </div>
             </div>
+            <?php endforeach ?>
         </div>
-        <div class="container" id="hochzeitsfloristik">
-            <div class="text">
-                <img src="<?= $this->resourceHelper('img/icons/Icon_Hochzeit.svg') ?>">
-                <p class="head">Hochzeitsfloristik</p>
-                <div class="button" id="quality-btn"><?= $this->translate('angebot.button-lable')?></div>
-            </div>
-        </div>
-        <div class="container" id="trauerfloristik">
-            <div class="text">
-                <img src="<?= $this->resourceHelper('img/icons/Icon_Trauerfloristik.svg') ?>">
-                <p class="head">Trauerfloristik</p>
-                <div class="button" id="quality-btn"><?= $this->translate('angebot.button-lable')?></div>
-            </div>
-        </div>
-        <div class="container" id="pflanzen">
-            <div class="text">
-                <img src="<?= $this->resourceHelper('img/icons/Icon_Pflanzen.svg') ?>">
-                <p class="head">Pflanzen</p>
-                <div class="button" id="quality-btn"><?= $this->translate('angebot.button-lable')?></div>
-            </div>
-        </div>
-        <div class="container" id="service">
-            <div class="text">
-                <img src="<?= $this->resourceHelper('img/icons/Icon_Service.svg') ?>">
-                <p class="head">Service</p>
-                <div class="button" id="quality-btn"><?= $this->translate('angebot.button-lable')?></div>
-            </div>
-        </div>
-        <div class="container" id="landschaftspflege">
-            <div class="text">
-                <img src="<?= $this->resourceHelper('img/icons/Icon_Landschaftspflege.svg') ?>">
-                <p class="head">Landschaftspflege</p>
-                <div class="button" id="quality-btn"><?= $this->translate('angebot.button-lable')?></div>
-            </div>
-        </div>
-    </div>
-    <div class="content">
-    </div>
+    <?php endforeach; ?>
 </div>

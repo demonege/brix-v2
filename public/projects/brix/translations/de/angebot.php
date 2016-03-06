@@ -2,10 +2,16 @@
 
 return array(
     'button-lable' => 'mehr erfahren',
-    'container' => array(
-        '1' => 'test1',
-        '2' => 'test2',
-        '3' => 'test3',
-        '4' => 'test4',
+    'content' => array(
+    	'col1' => array(
+    		'floristik' => 'floristik',
+    		'hochzeitsfloristik' => 'hochzeitsfloristik',
+            'trauerfloristik' => 'trauerfloristik',
+    	),
+        'col2' => array(
+            'pflanzen' => 'pflanzenservice',
+            'service' => 'service',
+            'landschaftspflege' => 'landschaftspflege',
+        ),
     ),
 );

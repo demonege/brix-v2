@@ -24,58 +24,6 @@
             }
         }
 
-
-        .btn-back
-        {
-            left:0px;
-            top:50%;
-            height: 30px;
-            width: 30px;
-            position: absolute;
-            z-index: 1;
-            color:black;
-
-            &:before {
-                font-family: 'icomoon';
-                content:"\e600";
-                position: absolute;
-                width: 100%;
-                height: 100%;
-                right:0;
-                font-size: 30px;
-                @include transform(rotate(180deg));
-            }
-
-            &:hover
-            {
-                cursor: pointer;
-            }
-        }
-        .btn-next
-        {
-            right:0px;
-            top:50%;
-            height: 30px;
-            width: 30px;
-            position: absolute;
-            z-index: 1;
-            color:black;
-
-            &:before {
-                font-family: 'icomoon';
-                content:"\e600";
-                position: absolute;
-                width: 100%;
-                height: 100%;
-                left:0;
-                font-size: 30px;
-            }
-
-            &:hover
-            {
-                cursor: pointer;
-            }
-        }
         .slider-content
         {
             height: 500px;
@@ -92,9 +40,6 @@
                 &#pic-2{background-image: url("../img/03-15-03-27-AB-Kremp_March_1280_03.jpg");}
                 &#pic-3{background-image: url("../img/04-15-03-27-AB-Kremp_March_1280_10.jpg");}
                 &#pic-4{background-image: url("../img/09-15-03-27-AB-Kremp_March_1280_08.jpg");}
-            }
-            .picture.show
-            {
             }
         }
     }
