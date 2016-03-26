@@ -2,10 +2,11 @@
     $path = 'img/icons/Icon_';
 ?>
 <div id="angebot" class="angebot">
+    <div class="headline"><?= $this->translate('angebot.headline') ?></div>
     <?php foreach ($this->translate('angebot.content') as $array): ?>
         <div class="content">
             <?php foreach ($array as $text): ?>
-            <div class="container" id='<?= $text ?>'>
+            <div class="container angebot-container" id='<?= $text ?>'>
                 <div class="text">
                     <img src="<?= $this->resourceHelper($path . $text . '.svg' )?>">
                     <p class="head"><?= $text ?></p>

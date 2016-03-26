@@ -1,7 +1,7 @@
 <?php
     return array(
         'angebot' => 'Unser Angebot',
-        'impressionen' => 'impressionen',
+        'impressionen' => 'Impressionen',
         'oeffnungszeiten' => 'Öffnungszeiten',
         'contact' => 'Anfahrt & Kontakt',
     );

@@ -61,4 +61,36 @@ jQuery(document).ready(function(){
         return index;
     };
 
+    //pfad zu template files
+
+    var path = "projects/brix/templates/views/default/index/pages/"
+    //Layer ansicht for angebote.phtml
+    var angebote = jQuery('.angebot-container');
+    jQuery(angebote).each(function(i,el){
+        jQuery(el).click(function(){
+            jQuery.post('http://brix.local',{id: jQuery(angebote[i]).attr('id')}).done(function(data) {
+                console.log(data);
+                //jQuery('.layer-angebot').html(data);
+                //jQuery('.layer-angebot').addClass('active');
+            });
+        });
+    });
+
+    //Layer ansicht for impressionen.phtml
+    var impressionen = jQuery('.impression-container');
+    jQuery(impressionen).each(function(i,el){
+        jQuery(el).click(function(){
+            jQuery.post(path + 'layer.phtml',{id: jQuery(angebote[i]).attr('id')}).done(function(data) {
+                jQuery('.layer-angebot').html(data);
+                jQuery('.layer-angebot').addClass('active');
+            });
+        });
+    });
+
+    //function for close layer
+    jQuery('.close-layer').click(function(){
+        jQuery('.layer').removeClass('active');
+        jQuery('.formularLayer').removeClass('active');
+        jQuery('.imprintlayer').removeClass('active');
+    });
 });

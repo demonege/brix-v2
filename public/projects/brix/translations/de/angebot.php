@@ -2,6 +2,7 @@
 
 return array(
     'button-lable' => 'mehr erfahren',
+    'headline' => 'Unsere Angebot',
     'content' => array(
     	'col1' => array(
     		'floristik' => 'floristik',

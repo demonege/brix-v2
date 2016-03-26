@@ -7,7 +7,7 @@
 }
 .headline
 {
-    padding-top: 40px;
+    padding: 40px;
     color: white;
     font-size: $fontHeadline;
     text-align: center;
@@ -16,14 +16,14 @@
 
 .col-wrapper-oeffnung
 {
-    margin-top: 30px;
     text-align: center;
-    padding-left: 10%;
+    width: 60%;
+    margin:45px auto;
 
     .col
     {
+        width: 33%;
         float: left;
-        margin: 30px 40px 0px;
 
         .head
         {
@@ -31,6 +31,12 @@
         }
 
     }
+
+    ul
+    {
+        margin-top: 10px;
+    }
+
     li
     {
         padding-top: 5px;

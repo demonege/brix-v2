@@ -1,0 +1,16 @@
+<?php
+	$path = 'img/';
+?>
+<div class="impressionen">
+	<div class="headline"><?= $this->translate('impressionen.headline') ?></div>
+	<div class="wrapper">
+	<?php foreach ($this->translate('impressionen.content') as $text): ?>
+		<div class="impression-container">
+			<img src="<?= $this->resourceHelper($path . $text . '.jpg')?>">
+			<div class="overlay">
+				<div class="icon"></div>
+			</div>
+		</div>
+	<?php endforeach ?>
+	</div>
+</div>
