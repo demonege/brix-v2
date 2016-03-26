@@ -68,10 +68,9 @@ jQuery(document).ready(function(){
     var angebote = jQuery('.angebot-container');
     jQuery(angebote).each(function(i,el){
         jQuery(el).click(function(){
-            jQuery.post('http://brix.local',{id: jQuery(angebote[i]).attr('id')}).done(function(data) {
-                console.log(data);
-                //jQuery('.layer-angebot').html(data);
-                //jQuery('.layer-angebot').addClass('active');
+            jQuery.post(path + 'layer.phtml',{id: jQuery(angebote[i]).attr('id')}).done(function(data) {
+                jQuery('.layer-angebot').html(data);
+                jQuery('.layer-angebot').addClass('active');
             });
         });
     });
