@@ -1,16 +1,18 @@
 <?php
 	$path = 'img/';
+	$counter = 1;
 ?>
 <div class="impressionen">
 	<div class="headline"><?= $this->translate('impressionen.headline') ?></div>
 	<div class="wrapper">
 	<?php foreach ($this->translate('impressionen.content') as $text): ?>
-		<div class="impression-container">
+		<div class="impression-container" id="<?= $counter ?>">
 			<img src="<?= $this->resourceHelper($path . $text . '.jpg')?>">
 			<div class="overlay">
 				<div class="icon"></div>
 			</div>
 		</div>
+	<?php $counter++; ?>
 	<?php endforeach ?>
 	</div>
 </div>

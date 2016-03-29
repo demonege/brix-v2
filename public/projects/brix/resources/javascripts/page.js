@@ -61,35 +61,35 @@ jQuery(document).ready(function(){
         return index;
     };
 
-    //pfad zu template files
-
-    var path = "projects/brix/templates/views/default/index/pages/"
     //Layer ansicht for angebote.phtml
     var angebote = jQuery('.angebot-container');
     jQuery(angebote).each(function(i,el){
         jQuery(el).click(function(){
-            jQuery.post(path + 'layer.phtml',{id: jQuery(angebote[i]).attr('id')}).done(function(data) {
-                jQuery('.layer-angebot').html(data);
+            jQuery.post(window.location.origin,{id: jQuery(angebote[i]).attr('id')}).done(function(data) {
+                var angebotdata = jQuery(data).find('.layer-angebot');
+                jQuery('.layer-angebot').html(angebotdata);
                 jQuery('.layer-angebot').addClass('active');
             });
         });
     });
 
-    //Layer ansicht for impressionen.phtml
-    var impressionen = jQuery('.impression-container');
-    jQuery(impressionen).each(function(i,el){
+    //Layer ansicht for angebote.phtml
+    var impression = jQuery('.impression-container');
+    jQuery(impression).each(function(i,el){
         jQuery(el).click(function(){
-            jQuery.post(path + 'layer.phtml',{id: jQuery(angebote[i]).attr('id')}).done(function(data) {
-                jQuery('.layer-angebot').html(data);
-                jQuery('.layer-angebot').addClass('active');
+            jQuery.post(window.location.origin,{imagecount: jQuery(impression[i]).attr('id')}).done(function(data) {
+                var impressiondata = jQuery(data).find('.impression-layer');
+                jQuery('.impression-layer').html(angebotdata);
+                jQuery('.impression-layer').addClass('active');
             });
         });
     });
 
-    //function for close layer
-    jQuery('.close-layer').click(function(){
-        jQuery('.layer').removeClass('active');
-        jQuery('.formularLayer').removeClass('active');
-        jQuery('.imprintlayer').removeClass('active');
-    });
 });
+
+//function for close layer
+function closeLayer()
+{
+  jQuery('.layer-angebot').removeClass('active');
+  jQuery('.impression-layer').removeClass('active');
+}

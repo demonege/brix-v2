@@ -1,39 +1,42 @@
 <?php
 	if(!empty($_POST)) {
-		$text = $_POST['id'];
+		$translationKey = $_POST['id'];
 	} else {
-		$text = 'fallback';
+		$translationKey = 'fallback';
 	}
 
-	$path = 'img/icons/Icon_' . $text . '.svg';
+	$path = 'img/icons/Icon_' .$translationKey. '.svg';
 ?>
 <div class="layer-angebot">
 	<div class="container">
 		<div class="header">
-			<img src="">
-			<div class="headline"><?=  $text ?></div>
-			<div class="subheadline"><?=  $text ?></div>
+			<img class="close" onclick="closeLayer()" src="<?= $this->resourceHelper('img/icons/Icon_schließen.svg')?>">
+			<div class="icon">
+				<img class="icon" src="<?= $this->resourceHelper($path)?>">
+			</div>
+			<div class="headline"><?= $translationKey ?></div>
+			<div class="subheadline"><?= $this->translate('layer.' .$translationKey. '.subheadline') ?></div>
 		</div>
 		<div class="left">
 			<div class="textarea">
-				<p><?=  $text ?></p>
-				<ul class="ul-layer">
-				<li>-test</li>
-				<li>-test</li>
-				<li>-test</li>
-				<li>-test</li>
-				<li>-test</li>
-				<li>-test</li>
-				<li>-test</li>
-				</ul>
-				<p><?=  $text ?></p>
+				<p  class="subtext"><?= $this->translate('layer.' .$translationKey. '.subtext') ?></p>
+				<p><?= $this->translate('layer.' .$translationKey. '.wir') ?></p>
+				<div class="area">
+					<?php foreach ($this->translate('layer.' .$translationKey. '.content') as $ul): ?>
+						<ul class="ul-layer">
+							<?php foreach ($ul as $litext): ?>
+								<li>-<?= $litext ?></li>
+							<?php endforeach; ?>
+						</ul>
+					<?php endforeach ?>
+				</div>
+				<p><?=  $this->translate('layer.' .$translationKey. '.bottomText') ?></p>
 			</div>
 		</div>
 		<div class="right">
-			<img src="">
-			<img src="">
-			<img src="">
-			<img src="">
+			<?php foreach ($this->translate('layer.' .$translationKey. '.image') as $img): ?>
+				<img class="image" src="<?= $this->resourceHelper($img)?>">
+			<?php endforeach; ?>
 		</div>
 	</div>
 </div>

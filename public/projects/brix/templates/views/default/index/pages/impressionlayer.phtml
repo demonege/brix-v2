@@ -1,0 +1,21 @@
+<?php
+	if(!empty($_POST)) {
+		$imagecount = $_POST['imagecount'];
+	} else {
+		$imagecount = '1';
+	}
+?>
+<div class="impression-layer">
+	<div class="container">
+		<img  class="close" onclick="closeLayer()" src="<?= $this->resourceHelper('img/icons/Icon_schließen.svg')?>">
+		<?php foreach($this->translate('impressionlayer.image') as $image) ?>
+			<div class="image-container">
+				<img src="<?= $this->resourceHelper('img/Rosen.jpg')?>">
+				<p>Unterschrift</p>
+			</div>
+		<?php endforeach; ?>
+		<div class="left-arrow"></div>
+		<div class="right-arrow"></div>
+		<div class="counter"><?php $imagecount ?>/2</div>
+	</div>
+</div>
