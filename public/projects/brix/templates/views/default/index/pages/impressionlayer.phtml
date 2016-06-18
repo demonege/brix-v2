@@ -1,19 +1,25 @@
 <?php
-	if(!empty($_POST)) {
+	if(!empty($_POST['imagecount'])) {
 		$imagecount = $_POST['imagecount'];
 	} else {
 		$imagecount = '1';
 	}
+
+	$path = 'img/';
 ?>
 <div class="impression-layer">
 	<div class="container">
 		<img  class="close" onclick="closeLayer()" src="<?= $this->resourceHelper('img/icons/Icon_schließen.svg')?>">
-		<?php foreach($this->translate('impressionlayer.image') as $image) ?>
-			<div class="image-container">
-				<img src="<?= $this->resourceHelper('img/Rosen.jpg')?>">
-				<p>Unterschrift</p>
+		<div class="wrapper">
+			<div class="image-wrapper">
+				<?php foreach($this->translate('impressionlayer.imagecontainer') as $array) :?>
+					<div class="image-container">
+						<img src="<?= $this->resourceHelper($path . $array['image'] . '.jpg')?>">
+						<p><?= $array['text'] ?></p>
+					</div>
+				<?php endforeach; ?>
 			</div>
-		<?php endforeach; ?>
+		</div>
 		<div class="left-arrow"></div>
 		<div class="right-arrow"></div>
 		<div class="counter"><?php $imagecount ?>/2</div>

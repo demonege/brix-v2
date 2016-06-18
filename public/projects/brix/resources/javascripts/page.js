@@ -79,12 +79,11 @@ jQuery(document).ready(function(){
         jQuery(el).click(function(){
             jQuery.post(window.location.origin,{imagecount: jQuery(impression[i]).attr('id')}).done(function(data) {
                 var impressiondata = jQuery(data).find('.impression-layer');
-                jQuery('.impression-layer').html(angebotdata);
+                jQuery('.impression-layer').html(impressiondata);
                 jQuery('.impression-layer').addClass('active');
             });
         });
     });
-
 });
 
 //function for close layer
@@ -93,3 +92,54 @@ function closeLayer()
   jQuery('.layer-angebot').removeClass('active');
   jQuery('.impression-layer').removeClass('active');
 }
+
+//Slieder Element Layer
+    var cotainerwidth = jQuery('.impression-layer .wrapper .image-container').children();
+    cotainerwidth = cotainerwidth.length * jQuery(cotainerwidth[0]).width();
+    jQuery('.impression-layer .wrapper .image-container').css({"width": cotainerwidth + 'px'})
+
+    var picturewidth = jQuery('.wrapper').width();
+    var sliderElemen = jQuery('.impression-layer .wrapper .image-container').children();
+    var translateValue = picturewidth;
+    var i = 0;
+    jQuery(sliderElemen).each(function(){
+        jQuery(sliderElemen[i]).css({"width": picturewidth + 'px'});
+        i++;
+    });
+
+    //Slider Layer element
+    var sliderIndex = 0;
+    jQuery('.left-arrow').click(function(){
+        sliderIndex = changeLayerPic(--sliderIndex)
+    });
+
+    jQuery('.right-arrow').click(function(){
+        sliderIndex = changeLayerPic(++sliderIndex)
+    });
+
+    function changeLayerPic(index) {
+        var picture = jQuery('.impression-layer .wrapper .image-container').children();
+        if(index >=  picture.length)
+        {
+            index = 0;
+        }
+        else if(index < 0)
+        {
+            index = picture.length-1;
+        }
+
+        picture.each(function(i, el){
+            if(i == index )
+            {
+                jQuery(el).addClass('show');
+
+                var translateX = translateValue * (i);
+                jQuery('.impression-layer .wrapper .image-container').css({"transform": "translateX(" + -translateX + 'px)'});
+            }
+            else
+            {
+                jQuery(el).removeClass('show');
+            }
+        });
+        return index;
+    };

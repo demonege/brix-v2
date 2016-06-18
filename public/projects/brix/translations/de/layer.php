@@ -7,7 +7,10 @@
 			'wir' => '',
 			'bottomText' => '',
 			'content' => array(
-				'text1' => '',
+				'col1' => array(
+					'text1' => '',
+				),
+
 			),
 			'image' => array(
 				'img1' =>'',

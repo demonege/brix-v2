@@ -116,6 +116,7 @@
 		margin: 0 auto;
 		height: 400px;
 		top:100px;
+		overflow: hidden;
 		opacity: 1;
 		z-index: 1;
 
@@ -152,13 +153,25 @@
 			cursor: pointer;
 		}
 
-		.image-container
+		.wrapper
 		{
-			width:50%;
+			width: 50%;
+			height: 250px;
 			padding-top: 60px;
 			margin: 0 auto;
 			overflow: hidden;
 			position: relative;
+
+			.image-wrapper
+			{
+			}
+
+			.image-container
+			{
+				width: 400px;
+				height: 250px;
+				float: left;
+			}
 		}
 
 		.counter
