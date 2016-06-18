@@ -73,7 +73,7 @@ jQuery(document).ready(function(){
         });
     });
 
-    //Layer ansicht for angebote.phtml
+    //Layer ansicht for impression layer
     var impression = jQuery('.impression-container');
     jQuery(impression).each(function(i,el){
         jQuery(el).click(function(){
@@ -81,6 +81,7 @@ jQuery(document).ready(function(){
                 var impressiondata = jQuery(data).find('.impression-layer');
                 jQuery('.impression-layer').html(impressiondata);
                 jQuery('.impression-layer').addClass('active');
+                ImpressionLayer();
             });
         });
     });
@@ -93,53 +94,58 @@ function closeLayer()
   jQuery('.impression-layer').removeClass('active');
 }
 
-//Slieder Element Layer
-    var cotainerwidth = jQuery('.impression-layer .wrapper .image-container').children();
+//Slieder Element Impression Layer
+function ImpressionLayer()
+{
+    var cotainerwidth = jQuery('.impression-layer .wrapper .image-wrapper').children();
     cotainerwidth = cotainerwidth.length * jQuery(cotainerwidth[0]).width();
-    jQuery('.impression-layer .wrapper .image-container').css({"width": cotainerwidth + 'px'})
+    console.log(cotainerwidth);
+    jQuery('.impression-layer .wrapper .image-wrapper').css({"width": cotainerwidth + 'px'})
 
-    var picturewidth = jQuery('.wrapper').width();
+    var picturewidth = jQuery('.wrapper-impression').width();
     var sliderElemen = jQuery('.impression-layer .wrapper .image-container').children();
     var translateValue = picturewidth;
+    console.log(sliderEleme);
     var i = 0;
     jQuery(sliderElemen).each(function(){
         jQuery(sliderElemen[i]).css({"width": picturewidth + 'px'});
         i++;
     });
+}
 
-    //Slider Layer element
-    var sliderIndex = 0;
-    jQuery('.left-arrow').click(function(){
-        sliderIndex = changeLayerPic(--sliderIndex)
-    });
+//Slider Layer element
+var sliderIndex = 0;
+jQuery('.left-arrow').click(function(){
+    sliderIndex = changeLayerPic(--sliderIndex)
+});
 
-    jQuery('.right-arrow').click(function(){
-        sliderIndex = changeLayerPic(++sliderIndex)
-    });
+jQuery('.right-arrow').click(function(){
+    sliderIndex = changeLayerPic(++sliderIndex)
+});
 
-    function changeLayerPic(index) {
-        var picture = jQuery('.impression-layer .wrapper .image-container').children();
-        if(index >=  picture.length)
+function changeLayerPic(index) {
+    var picture = jQuery('.impression-layer .wrapper .image-container').children();
+    if(index >=  picture.length)
+    {
+        index = 0;
+    }
+    else if(index < 0)
+    {
+        index = picture.length-1;
+    }
+
+    picture.each(function(i, el){
+        if(i == index )
         {
-            index = 0;
+            jQuery(el).addClass('show');
+
+            var translateX = translateValue * (i);
+            jQuery('.impression-layer .wrapper .image-container').css({"transform": "translateX(" + -translateX + 'px)'});
         }
-        else if(index < 0)
+        else
         {
-            index = picture.length-1;
+            jQuery(el).removeClass('show');
         }
-
-        picture.each(function(i, el){
-            if(i == index )
-            {
-                jQuery(el).addClass('show');
-
-                var translateX = translateValue * (i);
-                jQuery('.impression-layer .wrapper .image-container').css({"transform": "translateX(" + -translateX + 'px)'});
-            }
-            else
-            {
-                jQuery(el).removeClass('show');
-            }
-        });
-        return index;
-    };
+    });
+    return index;
+};

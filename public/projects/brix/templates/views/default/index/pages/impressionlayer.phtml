@@ -10,11 +10,11 @@
 <div class="impression-layer">
 	<div class="container">
 		<img  class="close" onclick="closeLayer()" src="<?= $this->resourceHelper('img/icons/Icon_schließen.svg')?>">
-		<div class="wrapper">
+		<div class="wrapper-impression">
 			<div class="image-wrapper">
 				<?php foreach($this->translate('impressionlayer.imagecontainer') as $array) :?>
 					<div class="image-container">
-						<img src="<?= $this->resourceHelper($path . $array['image'] . '.jpg')?>">
+						<img id="<?= $imagecount ?>" src="<?= $this->resourceHelper($path . $array['image'] . '.jpg')?>">
 						<p><?= $array['text'] ?></p>
 					</div>
 				<?php endforeach; ?>
@@ -22,6 +22,6 @@
 		</div>
 		<div class="left-arrow"></div>
 		<div class="right-arrow"></div>
-		<div class="counter"><?php $imagecount ?>/2</div>
+		<div class="counter"><?= $imagecount ?>/4</div>
 	</div>
 </div>
